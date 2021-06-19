@@ -1,25 +1,25 @@
 #include<iostream>
 using namespace std;
 
-void increment(int a){
+void incrementByValue(int a){
     a++;
-    cout<<"Inside Function "<<a<<endl;
+    cout<<"Inside Function by value: "<<a<<endl;
 }
 
-void decrement(int *b){
-    *b =*b+1;
-    cout<<"Inside Function "<<b<<endl;
+void incrementByReference(int *bptr){
+    *bptr =*bptr+1;
+    cout<<"Inside Function by reference: "<<*bptr<<endl;
 
 }
 
 int main(){
     int a =10;
-    increment(a);
-    cout<<"Inside Main : "<<a<<endl;
+    incrementByValue(a);
+    cout<<"Inside Main by value: "<<a<<endl;
 
     cout<<endl;
 
     int b=20;
-    decrement(&b);
-    cout<<"Inside Main : "<<b<<endl;
+    incrementByReference(&b);
+    cout<<"Inside Main by reference : "<<b<<endl;
 }
