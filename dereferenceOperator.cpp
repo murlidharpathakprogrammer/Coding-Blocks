@@ -13,5 +13,9 @@ int main(){
     cout<<*(&xptr)<<endl; // address of x
     cout<<&(*xptr)<<endl; // address of x
 
+    cout<<"\n"<<&xptr<<endl;
+    int ** xxptr = &xptr;
+    cout<<xxptr<<endl;
+
     return 0;
 }
